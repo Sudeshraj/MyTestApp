@@ -1,0 +1,48 @@
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card row" style="width: 68rem">
+            <div class="card-header row justify-content-center">Pensioner Details</div>
+
+            <form [formGroup]="userDtails">
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input formControlName="name" type="text" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Nic</label>
+                    <input formControlName="nic" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input formControlName="mobile" type="tel" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Retired Date</label>
+                    <input formControlName="retiredDate" type="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Monthly Salary</label>
+                    <input (keyup)="abc(userDtails.value)" formControlName="monthlySalary" type="number" step="any"
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Years Of Service</label>
+                    <input (keyup)="abc(userDtails.value)" formControlName="yearsOfService" type="number"
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Pension</label>
+                    <input formControlName="pension" type="number" step="any" class="form-control" value="{{p}}">
+
+                </div>
+                <br>
+                <button class="btn btn-outline-success me-2" (click)="onSubmit(userDtails.value)" type="submit"> Submit Form</button>
+            </form>
+            <br>
+
+        </div>
+    </div>
+</div>

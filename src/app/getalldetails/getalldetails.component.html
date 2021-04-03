@@ -1,0 +1,41 @@
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card row" style="width: 68rem">
+           
+            <div class="card-header row justify-content-center">All Pensioner Details</div>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                    <th>Name</th>
+                    <th>Nic</th>
+                    <th>mobile</th>
+                    <th>Monthly Salary</th>
+                    <th>Pension</th>
+                    <th>retiredDate</th>
+                    <th>yearsOfService</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of Users">
+                        <td>{{user.name}}</td>
+                        <td>{{user.nic}}</td>
+                        <td>{{user.mobile}}</td>
+                        <td>{{user.monthlySalary}}</td>
+                        <td>{{user.pension}}</td>
+                        <td>{{user.retiredDate}}</td>
+                        <td>{{user.yearsOfService}}</td>                        
+                        <td>{{user.userId}}</td>
+
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
